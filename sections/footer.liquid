@@ -1,0 +1,125 @@
+{%- assign social_icons = false -%}
+
+{% if
+  settings.social_twitter_link != blank
+  or settings.social_facebook_link != blank
+  or settings.social_pinterest_link != blank
+  or settings.social_instagram_link != blank
+  or settings.social_tumblr_link != blank
+  or settings.social_snapchat_link != blank
+  or settings.social_youtube_link != blank
+  or settings.social_vimeo_link != blank
+  or template.name == 'article'
+  or template.name == 'blog'
+%}
+  {%- assign social_icons = true -%}
+{% endif %}
+
+<footer class="site-footer" role="contentinfo">
+  <div class="page-width">
+
+    <div class="footer-top grid grid--no-gutters column-div"> 
+      {% if section.settings.logo %}
+        <a href="/" itemprop="url" class="logo-img grid__item small--one-half medium-up--one-half">
+          {% capture image_size %}{{ section.settings.logo_max_width | escape }}x{% endcapture %}
+          <img src="{{ section.settings.logo | img_url: image_size }}"
+               srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+               alt="{{ section.settings.logo.alt | default: shop.name }}"
+               itemprop="logo">
+        </a>
+      {% else %}
+        <a class="logo-txt site-footer__linklist-item grid__item small--one-half medium-up--one-half" href="/" itemprop="url">Larkin</a>
+      {% endif %}
+
+      <div class="logo-right-txt site-footer__linklist-item medium-up--one-half">
+        Larkin Imports
+      </div>
+    </div>
+
+    <div class="footer-bottom grid grid--no-gutters column-div"> 
+      <div class="empty-div grid__item medium-up--one-half">
+        empty
+      </div>
+
+      <div class="grid__item medium-up--one-sixth">
+        <div class="">
+          {%- assign footer_linklist_one = section.settings.footer_linklist_one -%}
+          {% if linklists[footer_linklist_one].links.size > 0 %}
+            <ul class="site-footer__linklist--center">
+              {% for link in linklists[footer_linklist_one].links %}
+                <li class="site-footer__linklist-item">
+                  <a class="link-txt" href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="grid__item medium-up--one-sixth">
+        <div class="">
+          {%- assign footer_linklist_two = section.settings.footer_linklist_two -%}
+          {% if linklists[footer_linklist_two].links.size > 0 %}
+            <ul class="site-footer__linklist--center">
+              {% for link in linklists[footer_linklist_two].links %}
+                <li class="site-footer__linklist-item">
+                  <a class="link-txt" href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="grid__item medium-up--one-sixth">
+        <div class="">
+          {%- assign footer_linklist_three = section.settings.footer_linklist_three -%}
+          {% if linklists[footer_linklist_three].links.size > 0 %}
+            <ul class="site-footer__linklist--center">
+              {% for link in linklists[footer_linklist_three].links %}
+                <li class="site-footer__linklist-item">
+                  <a class="link-txt" href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image"
+      },
+      {
+        "type": "text",
+        "id": "logo_max_width",
+        "label": "Custom logo width (in pixels)",
+        "default": "100"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist_one",
+        "label": "COMPANY"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist_two",
+        "label": "ABOUT"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist_three",
+        "label": "CONTACT"
+      }
+    ]
+  }
+{% endschema %}

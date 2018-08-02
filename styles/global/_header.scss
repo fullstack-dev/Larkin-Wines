@@ -1,0 +1,57 @@
+
+/*=============================  NOTIFICATION BAR  =============================*/
+
+.notification-bar__message {
+	background-color:#000;
+}
+
+/*=============================  HEADER  =============================*/
+
+.site-header {
+	z-index: 100;
+	background-color:#fff;
+	/*box-shadow: 3px 10px 20px 0px rgba(0, 0, 0, 0.05);*/
+}
+
+.site-header__icons-wrapper {
+	margin-right: 0;
+}
+
+@media only screen and (max-width: 749px) {
+	.grid__item.site-header__toggle {
+    padding-left: 12px;
+  }
+}
+/*=============================  MOBILE NAV  =============================*/
+
+.mobile-nav-wrapper {
+	z-index: 1;
+}
+
+.mobile-nav-wrapper.js-menu--is-open {
+	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+	padding-bottom: 60px;
+}
+
+.mobile-nav__link, .mobile-nav__sublist-link {
+	font-size:18px;
+}
+
+/*===============header custom css===================*/
+.search-icon-div {
+	margin-right: 25%;
+}
+
+.nav__menu {
+	text-align: left !important;
+}
+
+/*=============================  MOBILE RESPONSIVE  =============================*/
+@media only screen and (max-width: 749px) {
+	.search-icon-div {
+		margin-right: 0;
+	}
+	.site-header__icons {
+	     padding-right: 0; 
+	}
+}

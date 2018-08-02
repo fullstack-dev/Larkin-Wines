@@ -1,0 +1,29 @@
+{% unless grid_image_width %}
+  {%- assign grid_image_width = '300x300' -%}
+{% endunless %}
+{%- assign grid_image_scale = '2' -%}
+
+<div class="grid-view-item{% unless product.available %} product-price--sold-out grid-view-item--sold-out{% endunless %}">
+  <a class="grid-view-item__link" href="{{ product.url | within: collection }}">
+    <div class="product_image">
+      <div class="product_image-helper">
+        <img class="grid-view-item__image" src="{{ product.featured_image.src | img_url: grid_image_width, scale: grid_image_scale }}" alt="{{ product.featured_image.alt }}">
+      </div> 
+    </div>
+    <div class="h4 grid-view-item__title">{{ product.title }}</div>
+    {% if section.settings.show_vendor %}
+    <script type="text/javascript">
+      console.log("@@@: ", {{product|json}});
+    </script>
+      <div class="grid-view-item__vendor">{{ product.vendor }}, {{ product.options_with_values[0].values }}</div>
+    {% endif %}
+    <div class="grid-view-item__bottom">
+      <div class="grid-view-item__meta">
+        {% include 'product-price' %}
+      </div>
+      <div class="grid-view-item__view">
+        View
+      </div>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,151 @@
+/*=============================  COLLECTION STYLES  =============================*/
+
+.section-header {
+	font-size: 26px; 
+	margin-bottom: 1em;
+	h2 {
+		text-transform: none;
+		font-weight:300;
+		letter-spacing: -.01em;
+	}
+}
+
+
+
+@media only screen and (min-width: 750px) {
+	.section-header {
+	  margin-bottom: 1em;
+	}
+}
+
+/*=============================  COLLECTION CUSTOMIZE STYLES  =============================*/
+
+.drawer-page-content {
+	background-color: rgb(244, 245, 250) !important;
+}
+
+.filters-toolbar-wrapper {
+	border: none;
+    margin-bottom: 20px;	
+
+	.collection-header {
+		display: flex;
+
+		.section-header {
+			margin-bottom: 0;
+			width: 66.66%;
+
+			h2 {
+				font-size: 42px;
+				font-family: "nimbus-sans";
+				color: rgb(70, 72, 85);
+				line-height: 1.381;
+			}
+		}
+
+		.filters-toolbar {
+			width: 33.33% !important;
+
+			.filters-toolbar__item {
+				border-radius: 2px;
+				background-color: white;
+				box-shadow: 0px 6px 20px 0px rgba(53, 55, 66, 0.1);
+				flex: auto;
+				margin: 0 10px;
+
+				.filters-toolbar__input {
+					width: 100% !important;
+					font-size: 15px;
+					font-family: "nimbus-sans";
+					color: rgb(65, 75, 146);
+					line-height: 1.267;
+				    height: 40px;
+				}
+			}
+
+			.tags-width {
+				width: 66.66%;
+			}
+
+			.sort-width {
+				width: 33.33%
+			}
+		}
+	}
+}
+
+/*=============================  COLLECTION PAGINATION CUSTOMIZE STYLES  =============================*/
+
+.btn--disabled {
+    color: rgb(192, 196, 209) !important;
+}
+
+.btn--narrow {
+    color: rgb(65, 75, 146);
+}
+
+.btn--pagination {
+    font-size: 16px;
+    font-family: "nimbus-sans";
+    text-decoration: underline;
+    line-height: 1.2;
+}
+
+.btn--number {
+    font-size: 18px;
+    font-family: "nimbus-sans";
+    color: rgb(65, 75, 146);
+    line-height: 0.86;
+}
+
+.active {
+	.btn--number {
+		color: rgb(192, 196, 209) !important;
+	}
+}
+
+.btn--disabled {
+    opacity: 1;
+}
+
+/*=============================  MOBILE RESPONSIVE  =============================*/
+@media only screen and (max-width: 749px) {
+	.filters-toolbar-wrapper {	
+
+		.collection-header {
+			display: block;
+
+			.section-header {
+				width: 100%;
+
+			}
+
+			.filters-toolbar {
+				width: 100% !important;
+			    position: relative;
+
+				.filters-toolbar__item {
+					margin: 0;
+				}
+
+				.tags-width {
+					width: 40%;
+					margin-right: 5px;
+				}
+
+				.sort-width {
+					width: 40%;
+					margin-left: 5px;
+
+					.filters-toolbar__input--sort {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.pagination {
+		padding-bottom: 20px;
+	}
+}

@@ -1,0 +1,216 @@
+/*=============================  GLOBAL  =============================*/
+/*=============================  NOTIFICATION BAR  =============================*/
+.notification-bar__message {
+  background-color: #000; }
+
+/*=============================  HEADER  =============================*/
+.site-header {
+  z-index: 100;
+  background-color: #fff;
+  -webkit-box-shadow: 0 10px 35px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 35px 0 rgba(0, 0, 0, 0.05); }
+
+@media only screen and (max-width: 749px) {
+  .grid__item.site-header__toggle {
+    padding-left: 12px; } }
+
+/*=============================  MOBILE NAV  =============================*/
+.mobile-nav-wrapper {
+  z-index: 1; }
+
+.mobile-nav-wrapper.js-menu--is-open {
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding-bottom: 60px; }
+
+.mobile-nav__link, .mobile-nav__sublist-link {
+  font-size: 18px; }
+
+.site-footer {
+  color: #a5a8bb;
+  background-color: #353745;
+  padding: 55px 0;
+  margin: 0; }
+
+.link-txt {
+  font-size: 13px;
+  font-family: "nimbus-sans";
+  color: #7f829a;
+  line-height: 4.462;
+  z-index: 12; }
+
+nav.breadcrumb {
+  margin-top: 3em; }
+  nav.breadcrumb a {
+    color: #414b92;
+    padding: 0 1.2em; }
+  nav.breadcrumb a:first-child {
+    padding-left: 0; }
+  nav.breadcrumb span {
+    color: #c0c4d1; }
+  nav.breadcrumb span:last-child {
+    color: #ff402d;
+    padding-left: 1.2em; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "nimbus-sans","HelveticaNeue","Helvetica Neue",sans-serif; }
+
+/*=============================  SETTINGS  =============================*/
+/*================ #Basic Styles ================*/
+.main-content {
+  padding-bottom: 55px; }
+
+.page-width {
+  padding-left: 30px;
+  padding-right: 30px; }
+
+hr {
+  margin: 30px 0; }
+
+@media only screen and (min-width: 750px) {
+  .main-content {
+    padding-top: 3em; }
+  .page-width {
+    padding-left: 0;
+    padding-right: 0; } }
+
+@media only screen and (min-width: 1420px) {
+  .page-width {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/*=============================  MODULES  =============================*/
+/*=============================  COLLECTION STYLES  =============================*/
+.section-header {
+  font-size: 26px;
+  margin-bottom: 1em; }
+  .section-header h2 {
+    text-transform: none;
+    font-weight: 300;
+    letter-spacing: -.01em; }
+
+@media only screen and (min-width: 750px) {
+  .section-header {
+    margin-bottom: 1em; } }
+
+/*=============================  PRODUCT META STYLES  =============================*/
+.product-single__meta h1.product-single__title, .product-single__meta .product-single__title.h1 {
+  font-weight: 300; }
+
+.grid.product-single {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #fff; }
+  .grid.product-single .product-single__meta h1.product-single__title,
+  .grid.product-single .product-single__meta .product-single__title.h1 {
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    color: #464855; }
+  .grid.product-single .product-price__price {
+    display: inline-block;
+    color: #464855; }
+
+.product-single__price .product-price__price {
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: -0.04em; }
+
+.product-form .product-form__item--quantity .product-form__input {
+  -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.1); }
+
+.product-single__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .product-single__information .info-wrapper {
+    width: 33%; }
+    .product-single__information .info-wrapper label {
+      font-size: 14px;
+      color: #a7abbd;
+      text-align: left; }
+    .product-single__information .info-wrapper .info-value h5 {
+      font-size: 18px;
+      font-weight: 100;
+      letter-spacing: -0.04em;
+      color: #464855; }
+
+.product-form {
+  margin-bottom: 60px; }
+  .product-form .product-form__cart-submit {
+    max-width: 185px; }
+
+/*=============================  PRODUCT CARD STYLES  =============================*/
+.grid-view-item {
+  background: #fff;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.01);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.01); }
+  .grid-view-item .grid-view-item__title {
+    padding: 0 1.5em;
+    text-align: center;
+    font-size: 1em;
+    min-height: 32px;
+    color: #5e6977; }
+  .grid-view-item .grid-view-item__vendor {
+    text-align: center; }
+  .grid-view-item .grid-view-item__meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .grid-view-item .grid-view-item__meta .product-price__price {
+      color: #231e51; }
+
+.product_image {
+  margin-bottom: 0; }
+  .product_image .product_image-helper {
+    width: 100%;
+    display: block;
+    padding-bottom: 112%;
+    position: relative;
+    overflow: hidden; }
+    .product_image .product_image-helper img.grid-view-item__image {
+      position: absolute;
+      width: auto !important;
+      max-width: 150%;
+      height: 100%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
+
+.slideshow-wrapper {
+  border-bottom: 1px solid #ddd; }
+
+.slideshow__image {
+  background-size: contain; }
+
+.slideshow .slideshow__slide, .slideshow .slick-list, .slideshow .slick-track {
+  background: #fff; }
+
+.slideshow__text-content {
+  text-align: left; }
+
+.slideshow__title {
+  color: #464855;
+  font-weight: 300; }
+
+.slideshow__subtitle {
+  color: #898ea3; }
+
+@media only screen and (min-width: 750px) {
+  .index-section--flush:first-child {
+    padding-bottom: 0;
+    margin-top: -70px; }
+  .slideshow.slideshow--large {
+    height: calc(100vh - 98px); }
+  .mega-subtitle {
+    max-width: 100%; } }

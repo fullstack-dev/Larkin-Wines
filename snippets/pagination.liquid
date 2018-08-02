@@ -1,0 +1,43 @@
+{% assign count = paginate.pages %}
+
+<ul class="list--inline pagination">
+  <li>
+    {% unless paginate.previous.is_link %}
+      <div class="btn--narrow btn--disabled btn--pagination">
+        <!-- {% include 'icon-arrow-left' %} -->
+        Previous
+        <!-- <span class="icon__fallback-text">{{ 'general.pagination.previous' | t }}</span> -->
+      </div>
+    {% else %}
+      <a href="{{ paginate.previous.url }}" class="btn--narrow btn--pagination">
+        <!-- {% include 'icon-arrow-left' %} -->
+        Previous
+        <!-- <span class="icon__fallback-text">{{ 'general.pagination.previous' | t }}</span> -->
+      </a>
+    {% endunless %}
+  </li>
+  <!-- <li class="pagination__text"> -->
+    <!-- {{ 'general.pagination.current_page' | t: current: paginate.current_page, total: paginate.pages }} -->
+    <!-- <a href="{{paginate.current_page.url}}">{{ paginate.current_page }}</a> -->
+    {% for part in (1..count) %}
+      <li {% if paginate.current_page == part %}class="active"{% endif %}>
+        <a href="{{ collection.url }}?page={{ forloop.index }}" class="btn--number">{{ forloop.index }}</a>
+      </li>
+    {% endfor %}
+  <!-- </li> -->
+  <li>
+    {% unless paginate.next.is_link %}
+      <div class="btn--narrow btn--disabled btn--pagination">
+        <!-- {% include 'icon-arrow-right' %} -->
+        Next
+        <!-- <span class="icon__fallback-text">{{ 'general.pagination.next' | t }}</span> -->
+      </div>
+    {% else %}
+      <a href="{{ paginate.next.url }}" class="btn--narrow btn--pagination">
+        <!-- {% include 'icon-arrow-right' %} -->
+        Next
+        <!-- <span class="icon__fallback-text">{{ 'general.pagination.next' | t }}</span> -->
+      </a>
+    {% endunless %}
+  </li>
+</ul>

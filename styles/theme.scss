@@ -1,0 +1,17 @@
+
+/*=============================  GLOBAL  =============================*/
+@import 'global/header.scss';
+@import 'global/footer.scss';
+@import 'global/breadcrumbs.scss';
+@import 'global/fonts.scss';
+
+/*=============================  SETTINGS  =============================*/
+
+@import 'settings/settings.scss';
+
+/*=============================  MODULES  =============================*/
+
+@import 'modules/collection_styles.scss';
+@import 'modules/product_page_styles.scss';
+@import 'modules/card_styles.scss';
+@import 'modules/slideshow.scss';

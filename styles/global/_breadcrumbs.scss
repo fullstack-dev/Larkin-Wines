@@ -1,0 +1,52 @@
+nav.breadcrumb {
+	margin-top:3em;
+	a {
+		color:#414b92;
+		padding: 0 1.2em;
+	}
+	a:first-child {
+		padding-left:0;
+	}
+	span {
+		color:#c0c4d1;
+	}
+	span:last-child {
+		color:#ff402d;
+		padding-left: 1.2em;
+	}
+}
+
+nav.custom-breadcrumb-mobile {
+	display: none;
+}
+/*=============================  MOBILE RESPONSIVE  =============================*/
+@media only screen and (max-width: 749px) {
+	nav.breadcrumb {
+		display: none;
+	}
+
+	nav.custom-breadcrumb-mobile {
+		display: block;
+		margin-top:3em;
+
+		a {
+			color: rgb(65, 71, 146);
+
+			span {
+			    font-size: 1.1em;
+    			font-weight: bold;
+			}
+
+			span:last-child {
+			    border-bottom: 0.5px solid;
+    			margin-left: 8px;
+    			font-size: 1em;
+    			font-weight: normal;
+			}
+		}
+
+		a:active {
+		    background-color: rgb(176, 225, 245);
+		}
+	}
+}

@@ -1,0 +1,83 @@
+/*=============================  PRODUCT CARD STYLES  =============================*/
+
+.grid-view-item {
+	background:#fff;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.01);
+	.grid-view-item__title {
+		font-size: 16px;
+		font-family: "nimbus-sans";
+		line-height: 1.25;
+	  padding: 0 1.5em;
+	  text-align: center;
+/*	  font-size: 1em;*/
+/*	  min-height: 32px;*/
+	  color: #5e6977;
+	  font-weight: 400;
+	}
+	.grid-view-item__vendor {
+		text-align: center;
+		margin-top: 0;
+		color: #8995a4;
+		text-transform: none;
+		font-size: 14px;
+	}
+	.grid-view-item__meta {
+		display: flex;
+		justify-content: center;
+		.product-price__price {
+	    color: #231e51;
+	    letter-spacing: -0.05em;
+	  }
+	}
+}
+
+
+.product_image {
+	margin-bottom: 0;
+	.product_image-helper {
+		width: 100%;
+		display: block;
+		padding-bottom: 112%;
+		position: relative;
+		overflow: hidden;
+		img.grid-view-item__image {
+			position: absolute;
+			width: auto!important;
+			max-width:150%;
+			height: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+.grid-view-item__bottom {
+	display: flex;
+	align-items: center;
+	padding: 10px 20px 0;
+
+	.grid-view-item__meta {
+	    width: 50%;
+	    justify-content: left !important;
+
+	    .product-price__price {
+	    	font-weight: 400;
+	    	font-family: nimbus-sans;
+	    	color: #231e51;
+	    }    
+
+	}
+
+	.grid-view-item__view {
+    margin-top: 8px;
+    width: 50%;
+    font-size:14px;
+    text-align: right;
+    font-weight: 400;
+    font-family: "nimbus-sans";
+    text-decoration: underline;
+    color: #231e51;
+	}
+}
